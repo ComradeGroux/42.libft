@@ -6,7 +6,7 @@
 /*   By: vgroux <vgroux@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 11:57:15 by vgroux            #+#    #+#             */
-/*   Updated: 2022/10/11 13:04:05 by vgroux           ###   ########.fr       */
+/*   Updated: 2022/10/11 20:09:19 by vgroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,16 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	temp = (char *)src;
 	i = 0;
-	while (i < len)
-	{
-		((char *)dst)[i] = temp[i];
-		i++;
-	}
+	if ((char *)dst == temp)
+		return (dst);
+	else if ((char *)dst > temp)
+		while (len-- > 0)
+			((char *)dst)[len] = temp[len];
+	else
+		while (i < len)
+		{
+			((char *)dst)[i] = temp[i];
+			i++;
+		}
 	return (dst);
 }
