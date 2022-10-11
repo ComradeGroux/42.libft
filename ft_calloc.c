@@ -6,7 +6,7 @@
 /*   By: vgroux <vgroux@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 18:42:01 by vgroux            #+#    #+#             */
-/*   Updated: 2022/10/10 19:04:14 by vgroux           ###   ########.fr       */
+/*   Updated: 2022/10/11 16:31:03 by vgroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ void	*ft_calloc(size_t count, size_t size)
 	unsigned int	i;
 
 	i = 0;
-	ptr = (void *)malloc(count * size);
-	if (ptr)
+	ptr = malloc(count * size);
+	if (!ptr)
 		return (NULL);
-	while (i <= count)
+	while (i < count)
 	{
 		((char *)ptr)[i] = 0;
 		i++;
