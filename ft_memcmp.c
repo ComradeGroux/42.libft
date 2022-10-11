@@ -6,7 +6,7 @@
 /*   By: vgroux <vgroux@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 13:05:16 by vgroux            #+#    #+#             */
-/*   Updated: 2022/10/11 13:36:33 by vgroux           ###   ########.fr       */
+/*   Updated: 2022/10/11 20:16:40 by vgroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	if (n == 0)
 		return (0);
-	while (((char *)s1)[i] == ((char *)s2)[i] && i < n - 1)
+	while (((unsigned char *)s1)[i] == ((unsigned char *)s2)[i] && i < n - 1)
 		i++;
-	return (((char *)s1)[i] - ((char *)s2)[i]);
+	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }
