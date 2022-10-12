@@ -6,7 +6,7 @@
 /*   By: vgroux <vgroux@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 12:20:07 by vgroux            #+#    #+#             */
-/*   Updated: 2022/10/12 14:18:46 by vgroux           ###   ########.fr       */
+/*   Updated: 2022/10/12 16:27:47 by vgroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stddef.h>
 
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
@@ -27,7 +26,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
-int		ft_atoi(const char *nptr);
+int		ft_atoi(const char *str);
 int		ft_isalnum(int c);
 size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *s1);
