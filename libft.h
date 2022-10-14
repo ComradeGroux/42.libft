@@ -6,7 +6,7 @@
 /*   By: vgroux <vgroux@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 12:20:07 by vgroux            #+#    #+#             */
-/*   Updated: 2022/10/14 21:34:50 by vgroux           ###   ########.fr       */
+/*   Updated: 2022/10/14 22:01:32 by vgroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
@@ -50,5 +56,6 @@ char	**ft_split(const char *s, char c);
 char	*ft_itoa(int n);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+t_list	*ft_lstnew(void *content);
 
 #endif
