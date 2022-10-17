@@ -6,7 +6,7 @@
 #    By: vgroux <vgroux@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/30 14:09:53 by vgroux            #+#    #+#              #
-#    Updated: 2022/10/14 22:04:04 by vgroux           ###   ########.fr        #
+#    Updated: 2022/10/17 13:45:19 by vgroux           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,9 +33,10 @@ ${NAME}: ${OBJS}
 
 bonus: ${OBJSBONUS} ${OBJS}
 	ar rcs ${NAME} ${OBJS} ${OBJSBONUS}
+	ranlib ${NAME}
 
 clean:
-	${RM} ${OBJS}
+	${RM} ${OBJS} ${OBJSBONUS}
 
 fclean: clean
 	${RM} ${NAME}
