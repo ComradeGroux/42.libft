@@ -6,7 +6,7 @@
 /*   By: vgroux <vgroux@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 15:35:30 by vgroux            #+#    #+#             */
-/*   Updated: 2022/10/14 19:52:29 by vgroux           ###   ########.fr       */
+/*   Updated: 2022/10/17 17:42:46 by vgroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,21 @@ static char	*ft_dup_word(const char *s, size_t start, size_t end)
 	return (word);
 }
 
+static char	**ft_free_arr(char **strs)
+{
+	int	i;
+
+	i = 0;
+	while (strs[i] != NULL)
+	{
+		free(strs[i]);
+		i++;
+	}
+	free(strs[i]);
+	free(strs);
+	return (NULL);
+}
+
 char	**ft_split(const char *s, char c)
 {
 	char	**strs;
@@ -62,20 +77,20 @@ char	**ft_split(const char *s, char c)
 	strs = (char **)malloc((ft_count_words(s, c) + 1) * sizeof(char *));
 	if (!s || !strs)
 		return (NULL);
-	i = 0;
+	i = -1;
 	j = 0;
 	startword = -1;
-	while (i <= ft_strlen(s))
+	while (++i <= ft_strlen(s))
 	{
 		if (s[i] != c && startword < 0)
 			startword = i;
 		else if ((s[i] == c || i == ft_strlen(s)) && startword >= 0)
 		{
 			strs[j] = ft_dup_word(s, startword, i);
-			j++;
+			if (!(strs[j++]))
+				return (ft_free_arr(strs));
 			startword = -1;
 		}
-		i++;
 	}
 	strs[j] = NULL;
 	return (strs);

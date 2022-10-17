@@ -6,7 +6,7 @@
 #    By: vgroux <vgroux@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/30 14:09:53 by vgroux            #+#    #+#              #
-#    Updated: 2022/10/17 15:55:57 by vgroux           ###   ########.fr        #
+#    Updated: 2022/10/17 16:55:27 by vgroux           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,14 +22,14 @@ OBJSBONUS = ${BONUS:.c=.o}
 
 NAME =     libft.a
 
+${NAME}: ${OBJS}
+	ar rcs ${NAME} ${OBJS}
+	ranlib ${NAME}
+	
 all: ${NAME}
 
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o} 
-
-${NAME}: ${OBJS}
-	ar rcs ${NAME} ${OBJS}
-	ranlib ${NAME}
 
 bonus: ${OBJSBONUS} ${OBJS}
 	ar rcs ${NAME} ${OBJS} ${OBJSBONUS}
