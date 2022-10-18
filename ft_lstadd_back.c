@@ -6,7 +6,7 @@
 /*   By: vgroux <vgroux@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 14:00:32 by vgroux            #+#    #+#             */
-/*   Updated: 2022/10/17 14:22:15 by vgroux           ###   ########.fr       */
+/*   Updated: 2022/10/18 12:52:00 by vgroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	else if (new && lst)
 	{
 		while (temp->next != NULL)
-		{
 			temp = temp->next;
-		}
 		temp->next = new;
 	}
 }
