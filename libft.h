@@ -6,7 +6,7 @@
 /*   By: vgroux <vgroux@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 12:20:07 by vgroux            #+#    #+#             */
-/*   Updated: 2022/10/24 18:05:10 by vgroux           ###   ########.fr       */
+/*   Updated: 2022/10/25 15:55:30 by vgroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		ft_printf_ui(unsigned int n);
-char	*ft_uitoa(unsigned int n);
 int		ft_printf_conv(char format, va_list ap);
 int		ft_printf_char(char c);
 int		ft_printf_str(char *str);
