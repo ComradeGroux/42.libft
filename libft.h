@@ -6,12 +6,16 @@
 /*   By: vgroux <vgroux@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 12:20:07 by vgroux            #+#    #+#             */
-/*   Updated: 2022/10/25 15:55:30 by vgroux           ###   ########.fr       */
+/*   Updated: 2022/10/31 18:41:09 by vgroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef  LIBFT_H
 # define LIBFT_H
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -74,5 +78,12 @@ int		ft_printf_n_base(long long num, char *base);
 int		ft_printf_ptr(unsigned long ptr);
 char	*ft_ulltoa_base(unsigned long long n, char *base);
 int		ft_printf(const char *format, ...);
-
+char	*get_next_line(int fd);
+char	*ft_gnl_read(int fd, char *buffer);
+char	*ft_gnl_get_line(char *buffer);
+char	*ft_gnl_remove_old_line(char *buffer);
+int		ft_gnl_strchr(char *str);
+char	*ft_gnl_strjoin(char *line, char *buff);
+char	*ft_gnl_strndup(char *str, size_t end);
+char	*ft_gnl_remove_free(char *buffer);
 #endif
