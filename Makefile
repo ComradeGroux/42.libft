@@ -6,7 +6,7 @@
 #    By: vgroux <vgroux@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/30 14:09:53 by vgroux            #+#    #+#              #
-#    Updated: 2022/11/24 19:31:02 by vgroux           ###   ########.fr        #
+#    Updated: 2022/11/30 18:04:15 by vgroux           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ SRCS =		ft_atoi.c \
 			ft_atod.c \
 			ft_bzero.c \
 			ft_calloc.c \
+			ft_free_arr.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
 			ft_isascii.c \
