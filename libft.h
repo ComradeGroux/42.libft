@@ -6,7 +6,7 @@
 /*   By: vgroux <vgroux@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 12:20:07 by vgroux            #+#    #+#             */
-/*   Updated: 2022/12/09 12:15:10 by vgroux           ###   ########.fr       */
+/*   Updated: 2022/12/24 15:40:23 by vgroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ typedef enum e_bool
 	TRUE = 1
 }	t_bool;
 
-double		ft_atod(const char *str);
+double		ft_atof(const char *str);
 int			ft_atoi(const char *str);
 long		ft_atol(const char *str);
 void		ft_bzero(void *s, size_t n);

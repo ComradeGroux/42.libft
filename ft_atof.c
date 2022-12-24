@@ -6,13 +6,13 @@
 /*   By: vgroux <vgroux@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 15:55:26 by vgroux            #+#    #+#             */
-/*   Updated: 2022/11/24 19:18:47 by vgroux           ###   ########.fr       */
+/*   Updated: 2022/12/24 15:40:17 by vgroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-double	ft_atod(const char *str)
+double	ft_atof(const char *str)
 {
 	int		i;
 	double	j;
