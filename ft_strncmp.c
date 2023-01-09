@@ -6,12 +6,15 @@
 /*   By: vgroux <vgroux@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 14:34:41 by vgroux            #+#    #+#             */
-/*   Updated: 2022/10/11 19:24:58 by vgroux           ###   ########.fr       */
+/*   Updated: 2023/01/09 16:26:10 by vgroux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * return 0 if their are equals
+*/
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
